@@ -1,7 +1,7 @@
 # 🎓 Student Management System
 
 <p align="center">
-  <img src="screenshots/login.png" alt="Student Management System" width="900">
+  <img src="screenshots/Login Page.png" alt="Student Management System" width="900">
 </p>
 
 <h2 align="center">✨ Full-Stack Student Management System ✨</h2>
@@ -83,7 +83,7 @@ The main purpose of this project is to demonstrate practical full-stack developm
 ## 🔐 Login Module
 
 <p align="center">
-  <img src="screenshots/login.png" alt="Login Page" width="950">
+  <img src="screenshots/Login Page.png" alt="Login Page" width="950">
 </p>
 
 The Login module provides administrator access to the Student Management System.
@@ -116,7 +116,7 @@ The Login module provides administrator access to the Student Management System.
 ## 📊 Dashboard
 
 <p align="center">
-  <img src="screenshots/dashboard.png" alt="Dashboard Page" width="950">
+  <img src="screenshots/Dashboard Page.png" alt="Dashboard Page" width="950">
 </p>
 
 The Dashboard provides a centralized overview of the complete Student Management System.
@@ -157,7 +157,7 @@ Dashboard information is retrieved directly from the Spring Boot backend using R
 ## 👨‍🎓 Students Management
 
 <p align="center">
-  <img src="screenshots/students.png" alt="Students Module" width="950">
+  <img src="screenshots/Student Module.png" alt="Students Module" width="950">
 </p>
 
 The Students module is used to manage complete student records stored in the database.
@@ -208,7 +208,7 @@ The Students module is used to manage complete student records stored in the dat
 ## ➕ Add Student Module
 
 <p align="center">
-  <img src="screenshots/add-student.png" alt="Add Student Module" width="950">
+  <img src="screenshots/Add Student Module Page.png" alt="Add Student Module" width="950">
 </p>
 
 The Add Student module provides a structured form for creating new student records.
@@ -251,7 +251,7 @@ The Add Student module provides a structured form for creating new student recor
 ## 📚 Course Management
 
 <p align="center">
-  <img src="screenshots/courses.png" alt="Courses Module" width="950">
+  <img src="screenshots/Course Module Page.png" alt="Courses Module" width="950">
 </p>
 
 The Courses module provides complete CRUD functionality for managing courses.
@@ -291,7 +291,7 @@ DELETE  → DELETE
 # 📚 Course Management
 
 <p align="center">
-  <img src="screenshots/courses.png" alt="Courses Module" width="950">
+  <img src="screenshots/Course Module Page.png" alt="Courses Module" width="950">
 </p>
 
 The Courses module provides complete CRUD functionality for managing courses.
@@ -345,7 +345,7 @@ DELETE  → DELETE
 # 📅 Attendance Management
 
 <p align="center">
-  <img src="screenshots/attendance.png" alt="Attendance Module" width="950">
+  <img src="screenshots/Attendance Module Page.png" alt="Attendance Module" width="950">
 </p>
 
 The Attendance module allows the administrator to mark and manage student attendance records.
@@ -366,7 +366,7 @@ Absent
 # 💰 Fee Management
 
 <p align="center">
-  <img src="screenshots/fees.png" alt="Fees Module" width="950">
+  <img src="screenshots/Fees Module Page.png" alt="Fees Module" width="950">
 </p>
 
 The Fees module is used to manage student fee payments and payment records.
@@ -419,7 +419,7 @@ The Fees module is used to manage student fee payments and payment records.
 # 💬 Messages Module
 
 <p align="center">
-  <img src="screenshots/messages.png" alt="Messages Module" width="950">
+  <img src="screenshots/Messages.png" alt="Messages Module Page" width="950">
 </p>
 
 The Messages module allows the administrator to send and manage messages for students.
@@ -464,7 +464,7 @@ The Messages module allows the administrator to send and manage messages for stu
 # ⚙️ Settings Module
 
 <p align="center">
-  <img src="screenshots/settings.png" alt="Settings Module" width="950">
+  <img src="screenshots/Settings Module Page.png" alt="Settings Module " width="950">
 </p>
 
 The Settings module allows the administrator to manage profile information and system preferences.
