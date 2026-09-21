@@ -157,7 +157,7 @@ Dashboard information is retrieved directly from the Spring Boot backend using R
 ## 👨‍🎓 Students Management
 
 <p align="center">
-  <img src="screenshots/Student Module.png" alt="Students Module" width="950">
+  <img src="screenshots/Student Module Page.png" alt="Students Module" width="950">
 </p>
 
 The Students module is used to manage complete student records stored in the database.
