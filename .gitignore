@@ -1,0 +1,9 @@
+.idea/
+*.iml
+target/
+*.class
+.DS_Store
+Thumbs.db
+*.log
+
+application-local.properties

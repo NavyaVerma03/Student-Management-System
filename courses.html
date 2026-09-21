@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Courses | Student Management System</title>
+
+    <link rel="stylesheet" href="courses.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h2>Student</h2>
+                    <span>Management</span>
+                </div>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="dashboard.html" class="nav-item">
+                    <span>🏠</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="students.html" class="nav-item">
+                    <span>👨‍🎓</span>
+                    <span>Students</span>
+                </a>
+
+                <a href="courses.html" class="nav-item active">
+                    <span>📚</span>
+                    <span>Courses</span>
+                </a>
+
+               <a href="attendance.html" class="nav-item">
+                    <span>📅</span>
+                    <span>Attendance</span>
+                </a>
+
+                <a href="fees.html" class="nav-item">
+                    <span>💰</span>
+                    <span>Fees</span>
+                </a>
+
+                <a href="messages.html" class="nav-item">
+                    <span>💬</span>
+                    <span>Messages</span>
+                </a>
+
+               <a href="settings.html" class="nav-item">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+
+            <button class="logout-btn" onclick="logout()">
+                🚪
+                <span>Logout</span>
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>Courses</h1>
+
+                    <p>
+                        Manage your courses
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- Course Content -->
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>Course Management</h3>
+
+                        <p>
+                            Add and manage courses
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="add-course-btn"
+                        onclick="openAddCourse()">
+
+                        ➕ Add Course
+
+                    </button>
+
+                </div>
+
+
+                <!-- Course Table -->
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Course Name
+                                </th>
+
+                                <th>
+                                    Course Code
+                                </th>
+
+                                <th>
+                                    Duration
+                                </th>
+
+                                <th>
+                                    Description
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="courseTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="courses.js"></script>
+
+</body>
+
+</html>

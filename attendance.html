@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance | Student Management System</title>
+
+    <link rel="stylesheet" href="attendance.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h2>Student</h2>
+                    <span>Management</span>
+                </div>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="dashboard.html"
+                   class="nav-item">
+
+                    <span>🏠</span>
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="students.html"
+                   class="nav-item">
+
+                    <span>👨‍🎓</span>
+                    <span>Students</span>
+
+                </a>
+
+
+                <a href="courses.html"
+                   class="nav-item">
+
+                    <span>📚</span>
+                    <span>Courses</span>
+
+                </a>
+
+
+                <a href="attendance.html"
+                   class="nav-item active">
+
+                    <span>📅</span>
+                    <span>Attendance</span>
+
+                </a>
+
+
+               <a href="fees.html" class="nav-item">
+                    <span>💰</span>
+                    <span>Fees</span>
+                </a>
+
+
+                <a href="messages.html" class="nav-item">
+                    <span>💬</span>
+                    <span>Messages</span>
+                </a>
+
+
+                <a href="settings.html" class="nav-item">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+
+            <button class="logout-btn"
+                    onclick="logout()">
+
+                🚪
+                <span>Logout</span>
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main-content">
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>Attendance</h1>
+
+                    <p>
+                        Manage student attendance
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =========================
+                 ATTENDANCE CARD
+            ========================== -->
+
+            <section class="dashboard-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Mark Attendance
+                        </h3>
+
+                        <p>
+                            Select student and attendance status
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <div class="attendance-form">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Student
+                        </label>
+
+                        <select id="studentSelect">
+
+                            <option value="">
+                                Select Student
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="attendanceDate"
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Status
+                        </label>
+
+                        <select id="attendanceStatus">
+
+                            <option value="Present">
+                                Present
+                            </option>
+
+                            <option value="Absent">
+                                Absent
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        class="save-attendance-btn"
+                        onclick="saveAttendance()">
+
+                        ✅ Mark Attendance
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ATTENDANCE RECORDS
+            ========================== -->
+
+            <section class="dashboard-card records-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Attendance Records
+                        </h3>
+
+                        <p>
+                            Recently marked attendance
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="table-wrapper">
+
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student ID
+                                </th>
+
+                                <th>
+                                    Student Name
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="attendanceTableBody">
+
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <script src="attendance.js"></script>
+
+</body>
+
+</html>

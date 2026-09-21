@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fees | Student Management System</title>
+
+    <link rel="stylesheet" href="fees.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h2>Student</h2>
+                    <span>Management</span>
+                </div>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="dashboard.html"
+                   class="nav-item">
+
+                    <span>🏠</span>
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="students.html"
+                   class="nav-item">
+
+                    <span>👨‍🎓</span>
+                    <span>Students</span>
+
+                </a>
+
+
+                <a href="courses.html"
+                   class="nav-item">
+
+                    <span>📚</span>
+                    <span>Courses</span>
+
+                </a>
+
+                <a href="attendance.html"
+                    class="nav-item">
+
+                        <span>📅</span>
+                        <span>Attendance</span>
+
+                    </a>
+
+
+                <a href="fees.html"
+                    class="nav-item active">
+
+                        <span>💰</span>
+                        <span>Fees</span>
+
+                </a>
+
+
+                
+
+               <a href="messages.html" class="nav-item">
+                    <span>💬</span>
+                    <span>Messages</span>
+                </a>
+
+
+                <a href="settings.html" class="nav-item">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+
+            <button class="logout-btn"
+                    onclick="logout()">
+
+                🚪
+                <span>Logout</span>
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main-content">
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>Fees</h1>
+
+                    <p>
+                        Manage student fee payments
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =========================
+                 FEE FORM
+            ========================== -->
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Add Fee Payment
+                        </h3>
+
+                        <p>
+                            Enter student fee details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="fee-form">
+
+
+                    <!-- STUDENT -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Student
+                        </label>
+
+                        <select id="studentSelect">
+
+                            <option value="">
+                                Select Student
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- TOTAL FEE -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Total Fee
+                        </label>
+
+                        <input
+                            type="number"
+                            id="totalFee"
+                            placeholder="Enter total fee"
+                            min="0"
+                        >
+
+                    </div>
+
+
+
+                    <!-- PAID AMOUNT -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Paid Amount
+                        </label>
+
+                        <input
+                            type="number"
+                            id="paidAmount"
+                            placeholder="Enter paid amount"
+                            min="0"
+                        >
+
+                    </div>
+
+
+
+                    <!-- PAYMENT DATE -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Payment Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="paymentDate"
+                        >
+
+                    </div>
+
+
+
+                    <!-- PAYMENT STATUS -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Payment Status
+                        </label>
+
+                        <select id="paymentStatus">
+
+                            <option value="Paid">
+                                Paid
+                            </option>
+
+                            <option value="Partial">
+                                Partial
+                            </option>
+
+                            <option value="Pending">
+                                Pending
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ADD BUTTON -->
+
+                    <button
+                        class="save-fee-btn"
+                        onclick="saveFee()">
+
+                        💰 Add Fee
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 FEE RECORDS
+            ========================== -->
+
+            <section class="dashboard-card records-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Fee Records
+                        </h3>
+
+                        <p>
+                            Manage student fee payments
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student ID
+                                </th>
+
+                                <th>
+                                    Student Name
+                                </th>
+
+                                <th>
+                                    Total Fee
+                                </th>
+
+                                <th>
+                                    Paid
+                                </th>
+
+                                <th>
+                                    Pending
+                                </th>
+
+                                <th>
+                                    Payment Date
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="feeTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="fees.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students | Student Management System</title>
+
+    <link rel="stylesheet" href="students.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">🎓</div>
+
+                <div>
+                    <h2>Student</h2>
+                    <span>Management</span>
+                </div>
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="dashboard.html" class="nav-item">
+                    <span>🏠</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="students.html" class="nav-item active">
+                    <span>👨‍🎓</span>
+                    <span>Students</span>
+                </a>
+
+               <a href="courses.html" class="nav-item">
+                    <span>📚</span>
+                    <span>Courses</span>
+               </a>
+
+                <a href="attendance.html" class="nav-item">
+                    <span>📅</span>
+                    <span>Attendance</span>
+                </a>
+
+                <a href="fees.html" class="nav-item">
+                    <span>💰</span>
+                    <span>Fees</span>
+                </a>
+
+                <a href="messages.html" class="nav-item">
+                    <span>💬</span>
+                    <span>Messages</span>
+                </a>
+
+                <a href="settings.html" class="nav-item">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+
+            <button class="logout-btn" onclick="logout()">
+                🚪
+                <span>Logout</span>
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+                    <h1>Students</h1>
+                    <p>Manage all student records</p>
+                </div>
+
+
+                <div class="profile">
+
+                    <div class="notification" onclick="openNotifications()">
+                        🔔
+                        <span id="notificationCount">0</span>
+                    </div>
+
+                    <div id="notificationPanel" class="notification-panel">
+                        <div class="notification-header">
+                            <h3>Notifications</h3>
+                            <button onclick="closeNotifications()">×</button>
+                        </div>
+
+                        <div id="notificationList" class="notification-list">
+                            <p class="no-notifications">No notifications</p>
+                        </div>
+
+                        <button class="mark-read-btn" onclick="markAllNotificationsRead()">
+                            Mark All as Read
+                        </button>
+                    </div>
+
+                    <div class="profile-info">
+
+                        <div class="profile-avatar">
+                            NV
+                        </div>
+
+                        <div>
+                            <strong>Navya Verma</strong>
+                            <small>Administrator</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Page Controls -->
+            <section class="controls">
+
+                <div class="search-box">
+
+                    <span>🔍</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search students..."
+                    >
+
+                </div>
+
+
+                <select id="courseFilter">
+
+                    <option value="all">All Courses</option>
+
+                </select>
+
+
+                <button class="add-btn" onclick="openAddStudent()">
+                    + Add Student
+                </button>
+
+            </section>
+
+
+            <!-- Students Card -->
+            <section class="students-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>All Students</h3>
+                        <p id="studentCount">
+                            Showing 6 students
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Table -->
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Student</th>
+                                <th>Student ID</th>
+                                <th>Course</th>
+                                <th>Semester</th>
+                                <th>DOB</th>
+                                <th>Admission Year</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Gender</th>
+                                <th>Address</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="studentTableBody">
+
+                            <tr>
+
+                                <td>
+                                    <div class="student">
+
+                                        <div class="student-avatar blue-avatar">
+                                            RS
+                                        </div>
+
+                                        <div>
+                                            <strong>Rahul Sharma</strong>
+                                            <small>Male</small>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>STU001</td>
+
+                                <td>BCA</td>
+
+                                <td>rahul@gmail.com</td>
+
+                                <td>9876543210</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="actions">
+                                        <button class="edit-btn"
+                                            onclick="editStudent('STU001')">
+                                            ✏️
+                                        </button>
+
+                                        <button class="delete-btn"
+                                            onclick="deleteStudent('STU001')">
+                                            🗑️
+                                        </button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="student">
+
+                                        <div class="student-avatar pink-avatar">
+                                            PS
+                                        </div>
+
+                                        <div>
+                                            <strong>Priya Singh</strong>
+                                            <small>Female</small>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>STU002</td>
+
+                                <td>BCA</td>
+
+                                <td>priya@gmail.com</td>
+
+                                <td>9876501234</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="actions">
+                                        <button class="edit-btn"
+                                            onclick="editStudent('STU002')">
+                                            ✏️
+                                        </button>
+
+                                        <button class="delete-btn"
+                                            onclick="deleteStudent('STU002')">
+                                            🗑️
+                                        </button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="student">
+
+                                        <div class="student-avatar purple-avatar">
+                                            AK
+                                        </div>
+
+                                        <div>
+                                            <strong>Aman Kumar</strong>
+                                            <small>Male</small>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>STU003</td>
+
+                                <td>MCA</td>
+
+                                <td>aman@gmail.com</td>
+
+                                <td>9123456780</td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="actions">
+                                        <button class="edit-btn"
+                                            onclick="editStudent('STU003')">
+                                            ✏️
+                                        </button>
+
+                                        <button class="delete-btn"
+                                            onclick="deleteStudent('STU003')">
+                                            🗑️
+                                        </button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="student">
+
+                                        <div class="student-avatar yellow-avatar">
+                                            NS
+                                        </div>
+
+                                        <div>
+                                            <strong>Neha Sharma</strong>
+                                            <small>Female</small>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>STU004</td>
+
+                                <td>BBA</td>
+
+                                <td>neha@gmail.com</td>
+
+                                <td>9012345678</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="actions">
+                                        <button class="edit-btn"
+                                            onclick="editStudent('STU004')">
+                                            ✏️
+                                        </button>
+
+                                        <button class="delete-btn"
+                                            onclick="deleteStudent('STU004')">
+                                            🗑️
+                                        </button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="student">
+
+                                        <div class="student-avatar blue-avatar">
+                                            VK
+                                        </div>
+
+                                        <div>
+                                            <strong>Vikash Kumar</strong>
+                                            <small>Male</small>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>STU005</td>
+
+                                <td>BCA</td>
+
+                                <td>vikash@gmail.com</td>
+
+                                <td>9988776655</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="actions">
+                                        <button class="edit-btn"
+                                            onclick="editStudent('STU005')">
+                                            ✏️
+                                        </button>
+
+                                        <button class="delete-btn"
+                                            onclick="deleteStudent('STU005')">
+                                            🗑️
+                                        </button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="student">
+
+                                        <div class="student-avatar pink-avatar">
+                                            AD
+                                        </div>
+
+                                        <div>
+                                            <strong>Anjali Devi</strong>
+                                            <small>Female</small>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>STU006</td>
+
+                                <td>MCA</td>
+
+                                <td>anjali@gmail.com</td>
+
+                                <td>9090909090</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="actions">
+                                        <button class="edit-btn"
+                                            onclick="editStudent('STU006')">
+                                            ✏️
+                                        </button>
+
+                                        <button class="delete-btn"
+                                            onclick="deleteStudent('STU006')">
+                                            🗑️
+                                        </button>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="pagination">
+
+                    <span id="paginationText">Showing 0 students</span>
+
+                    <div>
+                        <button disabled>←</button>
+                        <button class="page-active">1</button>
+                        <button disabled>→</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="students.js?v=2"></script>
+
+</body>
+</html>

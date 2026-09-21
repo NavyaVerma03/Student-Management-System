@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Messages | Student Management System</title>
+
+    <link rel="stylesheet" href="messages.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h2>Student</h2>
+                    <span>Management</span>
+                </div>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="dashboard.html"
+                   class="nav-item">
+
+                    <span>🏠</span>
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="students.html"
+                   class="nav-item">
+
+                    <span>👨‍🎓</span>
+                    <span>Students</span>
+
+                </a>
+
+
+                <a href="courses.html"
+                   class="nav-item">
+
+                    <span>📚</span>
+                    <span>Courses</span>
+
+                </a>
+
+
+                <a href="attendance.html"
+                   class="nav-item">
+
+                    <span>📅</span>
+                    <span>Attendance</span>
+
+                </a>
+
+
+                <a href="fees.html"
+                   class="nav-item">
+
+                    <span>💰</span>
+                    <span>Fees</span>
+
+                </a>
+
+
+                <a href="messages.html"
+                   class="nav-item active">
+
+                    <span>💬</span>
+                    <span>Messages</span>
+
+                </a>
+
+
+               <a href="settings.html" class="nav-item">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+               </a>
+
+            </nav>
+
+
+            <button class="logout-btn"
+                    onclick="logout()">
+
+                🚪
+                <span>Logout</span>
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main-content">
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <h1>Messages</h1>
+
+                    <p>
+                        Send and manage student messages
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =========================
+                 SEND MESSAGE
+            ========================== -->
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Send Message
+                        </h3>
+
+                        <p>
+                            Send a message to a student
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="message-form">
+
+
+                    <!-- STUDENT -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Student
+                        </label>
+
+                        <select id="studentSelect">
+
+                            <option value="">
+                                Select Student
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="Enter message subject"
+                        >
+
+                    </div>
+
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="input-group full-width">
+
+                        <label>
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="5"
+                            placeholder="Write your message..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <button
+                        class="send-message-btn"
+                        onclick="sendMessage()">
+
+                        💬 Send Message
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 MESSAGE RECORDS
+            ========================== -->
+
+            <section class="dashboard-card records-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Message Records
+                        </h3>
+
+                        <p>
+                            Previously sent messages
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student
+                                </th>
+
+                                <th>
+                                    Subject
+                                </th>
+
+                                <th>
+                                    Message
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="messageTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="messages.js"></script>
+
+</body>
+
+</html>

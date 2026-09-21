@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Student Management System</title>
+
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🎓</div>
+
+            <div>
+                <h2>Student</h2>
+                <span>Management</span>
+            </div>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="dashboard.html" class="nav-item">
+                <span>🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="students.html" class="nav-item">
+                <span>👨‍🎓</span>
+                <span>Students</span>
+            </a>
+
+            <a href="courses.html" class="nav-item">
+                <span>📚</span>
+                <span>Courses</span>
+            </a>
+
+            <a href="attendance.html" class="nav-item">
+                <span>📅</span>
+                <span>Attendance</span>
+            </a>
+
+            <a href="fees.html" class="nav-item">
+                <span>💰</span>
+                <span>Fees</span>
+            </a>
+
+            <a href="messages.html" class="nav-item">
+                <span>💬</span>
+                <span>Messages</span>
+            </a>
+
+            <a href="settings.html" class="nav-item active">
+                <span>⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">
+            🚪
+            <span>Logout</span>
+        </button>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Settings</h1>
+                <p>Manage your system settings</p>
+            </div>
+
+        </header>
+
+
+        <!-- Profile Settings -->
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h3>Profile Settings</h3>
+                    <p>Manage administrator information</p>
+                </div>
+
+            </div>
+
+
+            <div class="settings-form">
+
+                <div class="input-group">
+
+                    <label>Administrator Name</label>
+
+                    <input
+                        type="text"
+                        id="adminName"
+                        placeholder="Enter administrator name"
+                        value="Admin"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        placeholder="Enter email"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Phone</label>
+
+                    <input
+                        type="text"
+                        id="adminPhone"
+                        placeholder="Enter phone number"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Role</label>
+
+                    <input
+                        type="text"
+                        value="Administrator"
+                        readonly
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button class="save-btn" onclick="saveProfile()">
+                💾 Save Profile
+            </button>
+
+        </section>
+
+
+        <!-- Password Settings -->
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h3>Change Password</h3>
+                    <p>Update your administrator password</p>
+                </div>
+
+            </div>
+
+
+            <div class="settings-form">
+
+                <div class="input-group">
+
+                    <label>Current Password</label>
+
+                    <input
+                        type="password"
+                        id="currentPassword"
+                        placeholder="Enter current password"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>New Password</label>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        placeholder="Enter new password"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Confirm Password</label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm new password"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button class="save-btn" onclick="changePassword()">
+                🔐 Change Password
+            </button>
+
+        </section>
+
+
+        <!-- System Settings -->
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h3>System Settings</h3>
+                    <p>General application settings</p>
+                </div>
+
+            </div>
+
+
+            <div class="system-settings">
+
+                <div class="setting-row">
+
+                    <div>
+                        <strong>System Name</strong>
+                        <p>Application name displayed in the system</p>
+                    </div>
+
+                    <input
+                        type="text"
+                        id="systemName"
+                        value="Student Management System"
+                    >
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <strong>Email Notifications</strong>
+                        <p>Enable system email notifications</p>
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="emailNotifications"
+                            checked
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div>
+                        <strong>Auto Save</strong>
+                        <p>Automatically save system changes</p>
+                    </div>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="autoSave"
+                            checked
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <button class="save-btn" onclick="saveSystemSettings()">
+                ⚙️ Save Settings
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="settings.js"></script>
+
+</body>
+</html>

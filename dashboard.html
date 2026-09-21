@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Student Management System</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🎓
+            </div>
+
+            <div>
+                <h2>Student</h2>
+                <span>Management</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="#" class="nav-item active">
+                <span>🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="students.html" class="nav-item">
+                <span>👨‍🎓</span>
+                <span>Students</span>
+            </a>
+
+            <a href="courses.html" class="nav-item">
+                <span>📚</span>
+                <span>Courses</span>
+            </a>
+
+            <a href="attendance.html" class="nav-item">
+                <span>📅</span>
+                <span>Attendance</span>
+            </a>
+
+            <a href="fees.html" class="nav-item">
+                <span>💰</span>
+                <span>Fees</span>
+            </a>
+
+            <a href="messages.html" class="nav-item">
+                <span>💬</span>
+                <span>Messages</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <span>⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <button class="logout-btn" onclick="logout()">
+            🚪
+            <span>Logout</span>
+        </button>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome back, Admin 👋
+                </p>
+
+            </div>
+
+
+            <div class="profile">
+                <div class="notification" onclick="openNotifications()">
+                    🔔
+                    <span id="notificationCount">0</span>
+                </div>
+
+                <div id="notificationPanel" class="notification-panel">
+                    <div class="notification-header">
+                        <h3>Notifications</h3>
+                        <button onclick="closeNotifications()">×</button>
+                    </div>
+
+                    <div id="notificationList" class="notification-list">
+                        <p class="no-notifications">No notifications</p>
+                    </div>
+
+                    <button class="mark-read-btn" onclick="markAllNotificationsRead()">
+                        Mark All as Read
+                    </button>
+                </div>
+
+
+                <div class="profile-info">
+
+                    <div class="profile-avatar">
+                        NV
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Navya Verma
+                        </strong>
+
+                        <small>
+                            Administrator
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+
+            <!-- Total Students -->
+            <div class="stat-card blue">
+
+                <div class="stat-icon">
+                    👨‍🎓
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Students
+                    </span>
+
+                    <h2 id="totalStudents">
+                        0
+                    </h2>
+
+                    <small>
+                        ↑ 12% this month
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Total Courses -->
+            <div class="stat-card purple">
+
+                <div class="stat-icon">
+                    📚
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Courses
+                    </span>
+
+                    <h2 id="totalCourses">
+                        0
+                    </h2>
+
+                    <small>
+                        02 new courses
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Active Students -->
+            <div class="stat-card pink">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <div>
+
+                    <span>
+                        Active Students
+                    </span>
+
+                    <h2 id="totalActiveStudents">
+                        0
+                    </h2>
+
+                    <small>
+                        91.6% active
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Fees Collected -->
+            <div class="stat-card yellow">
+
+                <div class="stat-icon">
+                    💰
+                </div>
+
+                <div>
+
+                    <span>
+                        Fees Collected
+                    </span>
+
+                    <h2 id="totalFeesCollected">
+                        ₹0
+                    </h2>
+
+                    <small>
+                        Total amount collected
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Content Grid -->
+        <section class="dashboard-grid">
+
+
+            <!-- Student Enrollment Chart -->
+            <div class="dashboard-card chart-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Student Enrollment
+                        </h3>
+
+                        <p>
+                            Students enrolled this year
+                        </p>
+
+                    </div>
+
+
+                    <!-- Year Dropdown -->
+                    <div class="chart-filter">
+
+                        <select id="chartYear">
+
+                            <option value="2026">
+                                2026
+                            </option>
+
+                            <option value="2025">
+                                2025
+                            </option>
+
+                            <option value="2024">
+                                2024
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Enrollment Chart -->
+                <div class="chart" id="enrollmentChart">
+
+                    <div class="bar" data-month="Jan">
+                        <span>Jan</span>
+                    </div>
+
+                    <div class="bar" data-month="Feb">
+                        <span>Feb</span>
+                    </div>
+
+                    <div class="bar" data-month="Mar">
+                        <span>Mar</span>
+                    </div>
+
+                    <div class="bar" data-month="Apr">
+                        <span>Apr</span>
+                    </div>
+
+                    <div class="bar" data-month="May">
+                        <span>May</span>
+                    </div>
+
+                    <div class="bar" data-month="Jun">
+                        <span>Jun</span>
+                    </div>
+
+                    <div class="bar" data-month="Jul">
+                        <span>Jul</span>
+                    </div>
+
+                    <div class="bar" data-month="Aug">
+                        <span>Aug</span>
+                    </div>
+
+                    <div class="bar" data-month="Sep">
+                        <span>Sep</span>
+                    </div>
+
+                    <div class="bar" data-month="Oct">
+                        <span>Oct</span>
+                    </div>
+
+                    <div class="bar" data-month="Nov">
+                        <span>Nov</span>
+                    </div>
+
+                    <div class="bar" data-month="Dec">
+                        <span>Dec</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Actions -->
+            <div class="dashboard-card quick-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Quick Actions
+                        </h3>
+
+                        <p>
+                            Manage your system
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <button onclick="addStudent()">
+
+                        <span>
+                            ➕
+                        </span>
+
+                        Add Student
+
+                    </button>
+
+
+                    <button onclick="openCourses()">
+
+                        <span>
+                            📚
+                        </span>
+
+                        Add Course
+
+                    </button>
+
+
+
+
+                    <button onclick="openSettings()">
+
+                        <span>
+                            ⚙️
+                        </span>
+
+                        Settings
+
+                    </button>
+
+
+                    <button onclick="openAttendance()">
+
+                        <span>
+                            📅
+                        </span>
+
+                        Attendance
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Recent Students -->
+        <section class="dashboard-card recent-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Recent Students
+                    </h3>
+
+                    <p>
+                        Recently added students
+                    </p>
+
+                </div>
+
+
+                <a href="students.html">
+                    View All →
+                </a>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Student
+                            </th>
+
+                            <th>
+                                Student ID
+                            </th>
+
+                            <th>
+                                Course
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="recentStudentsBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="dashboard.js?v=2"></script>
+
+</body>
+
+</html>

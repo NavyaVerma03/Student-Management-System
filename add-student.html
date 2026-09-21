@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Student | Student Management System</title>
+
+    <link rel="stylesheet" href="add-student.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">🎓</div>
+
+                <div>
+                    <h2>Student</h2>
+                    <span>Management</span>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <a href="dashboard.html" class="nav-item">
+                    <span>🏠</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="students.html" class="nav-item active">
+                    <span>👨‍🎓</span>
+                    <span>Students</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>📚</span>
+                    <span>Courses</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>📅</span>
+                    <span>Attendance</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>💰</span>
+                    <span>Fees</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>💬</span>
+                    <span>Messages</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+            <button class="logout-btn" onclick="logout()">
+                🚪
+                <span>Logout</span>
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+
+                    <a href="students.html" class="back-btn">
+                        ← Back to Students
+                    </a>
+
+                    <h1>Add New Student</h1>
+
+                    <p>Create a new student record</p>
+
+                </div>
+
+                <div class="profile">
+
+                    <div class="notification">
+                        🔔
+                        <span>3</span>
+                    </div>
+
+                    <div class="profile-info">
+
+                        <div class="profile-avatar">
+                            NV
+                        </div>
+
+                        <div>
+                            <strong>Navya Verma</strong>
+                            <small>Administrator</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Form Card -->
+            <section class="form-card">
+
+                <div class="form-heading">
+
+                    <div class="form-icon">
+                        👨‍🎓
+                    </div>
+
+                    <div>
+                        <h2>Student Information</h2>
+                        <p>Enter the student's details below</p>
+                    </div>
+
+                </div>
+
+
+                <form id="studentForm">
+
+                    <!-- Personal Information -->
+
+                    <div class="section-title">
+                        <span>01</span>
+                        Personal Information
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>
+                                Full Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Student ID
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="studentId"
+                                placeholder="e.g. STU007"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Email Address
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="student@example.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Phone Number
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Gender</label>
+
+                            <select id="gender">
+
+                                <option value="">
+                                    Select gender
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Date of Birth</label>
+
+                            <input
+                                type="date"
+                                id="dob"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Academic Information -->
+
+                    <div class="section-title academic-title">
+                        <span>02</span>
+                        Academic Information
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>
+                                Course
+                                <span>*</span>
+                            </label>
+
+                            <select id="course" required>
+
+                                <option value="">
+                                    Select course
+                                </option>
+
+                                <option value="BCA">
+                                    BCA
+                                </option>
+
+                                <option value="MCA">
+                                    MCA
+                                </option>
+
+                                <option value="BBA">
+                                    BBA
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Admission Year</label>
+
+                            <select id="admissionYear">
+
+                                <option value="">
+                                    Select year
+                                </option>
+
+                                <option value="2026">
+                                    2026
+                                </option>
+
+                                <option value="2025">
+                                    2025
+                                </option>
+
+                                <option value="2024">
+                                    2024
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+
+                        <label>Admission Date</label>
+
+                            <input
+                                type="date"
+                                id="admissionDate"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Semester</label>
+
+                            <select id="semester">
+
+                                <option value="">
+                                    Select semester
+                                </option>
+
+                                <option value="1">
+                                    1st Semester
+                                </option>
+
+                                <option value="2">
+                                    2nd Semester
+                                </option>
+
+                                <option value="3">
+                                    3rd Semester
+                                </option>
+
+                                <option value="4">
+                                    4th Semester
+                                </option>
+
+                                <option value="5">
+                                    5th Semester
+                                </option>
+
+                                <option value="6">
+                                    6th Semester
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Status</label>
+
+                            <select id="status">
+
+                                <option value="Active">
+                                    Active
+                                </option>
+
+                                <option value="Pending">
+                                    Pending
+                                </option>
+
+                                <option value="Inactive">
+                                    Inactive
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Address -->
+
+                    <div class="section-title academic-title">
+                        <span>03</span>
+                        Contact Information
+                    </div>
+
+
+                    <div class="input-group full-width">
+
+                        <label>Address</label>
+
+                        <textarea
+                            id="address"
+                            placeholder="Enter complete address"
+                            rows="4"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="cancel-btn"
+                            onclick="goBack()"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="save-btn"
+                        >
+                            ✓ Add Student
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="add-student.js"></script>
+
+</body>
+</html>

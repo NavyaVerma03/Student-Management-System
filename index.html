@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-container">
+
+            <!-- Left Side -->
+            <div class="login-intro">
+                <div class="logo">🎓</div>
+
+                <h1>Student<br>Management<br>System</h1>
+
+                <p>Manage Students, Build Brighter Futures</p>
+
+                <div class="college-illustration">
+                    🏫
+                </div>
+
+                <span>"A Better Learning Tomorrow"</span>
+            </div>
+
+
+            <!-- Right Side -->
+            <div class="login-box">
+
+                <div class="login-header">
+                    <h2>Welcome Back 👋</h2>
+                    <p>Login to your account</p>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+                        <label>Email or Username</label>
+                        <input 
+                            type="text" 
+                            id="username"
+                            placeholder="Enter email or username"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+
+                        <div class="password-box">
+                            <input 
+                                type="password"
+                                id="password"
+                                placeholder="Enter password"
+                                required
+                            >
+
+                            <button type="button" id="togglePassword">
+                                👁
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="login-options">
+                        <label>
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        Login
+                    </button>
+
+                </form>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <button class="admin-login">
+                    🛡 Login with Admin Account
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
