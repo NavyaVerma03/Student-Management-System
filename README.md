@@ -45,7 +45,7 @@ A complete academic management platform for students, courses, attendance, fees,
 
 ## 🎬 PROJECT IN ACTION
 
-<!-- Replace only the GIF filename -->
+
 
 <img src="screenshots/YOUR-DEMO-GIF-NAME.gif"
   width="92%"
@@ -205,7 +205,7 @@ A complete academic management platform for students, courses, attendance, fees,
 
 # 📸 Application Showcase
 
-> Replace the filenames below with the exact files from your `screenshots` folder.
+
 
 <div align="center">
 
