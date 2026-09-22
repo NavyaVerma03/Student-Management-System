@@ -1,282 +1,682 @@
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFFFFF,45:CCFBF1,75:BAF3F5,100:9DECF0&height=220&section=header&text=STUDENT%20MANAGEMENT%20SYSTEM&fontSize=40&fontColor=155E63&animation=fadeIn&fontAlignY=38" width="100%"/>
+
+<br>
+
 # 🎓 Student Management System
 
-<p align="center">
-  <img src="screenshots/Login Page.png" alt="Student Management System" width="900">
+### `A Modern Full-Stack Academic Management Platform`
+
+<p>
+A complete academic management platform for students, courses, attendance, fees, messages and administrative activities.
 </p>
 
-<h2 align="center">✨ Full-Stack Student Management System ✨</h2>
+<br>
 
-<p align="center">
-  A modern web-based application for managing students, courses,
-  attendance, fees, messages and administrator settings.
-</p>
+<a href="https://github.com/NavyaVerma03/Student-Management-System">
+<img src="https://img.shields.io/badge/🚀%20VIEW%20PROJECT-155E63?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+&nbsp;
+<a href="https://github.com/NavyaVerma03/Student-Management-System/stargazers">
+<img src="https://img.shields.io/badge/⭐%20STAR%20PROJECT-2F8F95?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
-<p align="center">
-  <b>Java • Spring Boot • Spring Data JPA • Hibernate • MySQL • HTML • CSS • JavaScript</b>
-</p>
+<br><br>
 
-<p align="center">
+<img src="https://img.shields.io/badge/Java-2F8F95?style=for-the-badge&logo=openjdk&logoColor=white"/>
+<img src="https://img.shields.io/badge/Spring%20Boot-4F9D69?style=for-the-badge&logo=springboot&logoColor=white"/>
+<img src="https://img.shields.io/badge/JPA-0F766E?style=for-the-badge&logo=spring&logoColor=white"/>
+<img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white"/>
+<img src="https://img.shields.io/badge/MySQL-168AAD?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-8A7A00?style=for-the-badge&logo=javascript&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML5-C85A3F?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-3576A8?style=for-the-badge&logo=css3&logoColor=white"/>
 
-![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)
+<br><br>
 
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.x-brightgreen?style=for-the-badge&logo=springboot)
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=800&color=2F8F95&center=true&vCenter=true&width=700&lines=Manage+Students+%7C+Courses+%7C+Attendance;Java+%7C+Spring+Boot+%7C+MySQL;REST+API+%7C+JPA+%7C+Hibernate;Build+%E2%80%A2+Learn+%E2%80%A2+Improve" alt="Animated typing"/>
 
-![MySQL](https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql)
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-yellow?style=for-the-badge&logo=javascript)
-
-![Git](https://img.shields.io/badge/Git-Version%20Control-orange?style=for-the-badge&logo=git)
-
-![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)
-
-</p>
+</div>
 
 ---
 
-# 📌 About The Project
+<div align="center">
 
-**Student Management System** is a full-stack web application developed to manage common academic and administrative activities in one centralized system.
+## 🎬 PROJECT IN ACTION
 
-The project combines a modern frontend built with **HTML, CSS and Vanilla JavaScript** with a backend developed using **Java and Spring Boot**.
+<!-- Replace only the GIF filename -->
 
-The application uses **Spring Data JPA and Hibernate** for database interaction and **MySQL** for persistent data storage.
+<img src="screenshots/YOUR-DEMO-GIF-NAME.gif"
+  width="92%"
+  alt="Student Management System Demo"/>
 
-The main purpose of this project is to demonstrate practical full-stack development concepts such as:
+<br>
 
-- REST API development
-- CRUD operations
-- Database integration
-- Object-Oriented Programming
-- Frontend-backend communication
-- Form validation
-- Dynamic dashboard
-- Notification system
-- Search and filtering
-- Responsive UI design
-- Git and GitHub workflow
+`LOGIN` → `DASHBOARD` → `STUDENTS` → `COURSES` → `ATTENDANCE` → `FEES`
+
+</div>
 
 ---
 
-# ✨ Key Features
+# 🌿 About The Project
 
-| Module | Features |
-|---|---|
-| 🔐 Login | Admin login, password visibility, validation |
-| 📊 Dashboard | Statistics, enrollment chart, recent students, quick actions |
-| 👨‍🎓 Students | Add, search, filter, update and delete students |
-| ➕ Add Student | Personal and academic information form |
-| 📚 Courses | Complete course CRUD |
-| 📅 Attendance | Mark and manage attendance |
-| 💰 Fees | Fee payment and pending amount management |
-| 💬 Messages | Send and manage student messages |
-| ⚙️ Settings | Administrator profile and system settings |
-| 🔔 Notifications | Automatic operation-based notifications |
+**Student Management System** is a full-stack academic management application that brings multiple academic and administrative workflows into one centralized platform.
 
----
+### The application connects
 
-# 🖥️ Application Screenshots
+<div align="center">
 
-## 🔐 Login Module
+**Frontend**
+`HTML + CSS + Vanilla JavaScript`
 
-<p align="center">
-  <img src="screenshots/Login Page.png" alt="Login Page" width="950">
-</p>
+⬇️
 
-The Login module provides administrator access to the Student Management System.
+**REST API**
+`Fetch API`
 
-### Features
+⬇️
 
-- Admin username and password
-- Password visibility toggle
-- Empty-field validation
-- Login API integration
-- JSON request/response
-- Successful login redirection
-- Invalid credential handling
+**Backend**
+`Java + Spring Boot`
 
-### Concepts Used
+⬇️
 
-- HTML Forms
-- CSS Styling
-- Vanilla JavaScript
-- DOM Manipulation
-- Event Listeners
-- Form Validation
-- Fetch API
-- HTTP POST Request
-- JSON
-- REST API Communication
+**Persistence**
+`Spring Data JPA + Hibernate`
+
+⬇️
+
+**Database**
+`MySQL`
+
+</div>
 
 ---
 
-## 📊 Dashboard
+# ✨ Features
 
-<p align="center">
-  <img src="screenshots/Dashboard Page.png" alt="Dashboard Page" width="950">
-</p>
+<table>
+<tr>
+<td width="50%" valign="top">
 
-The Dashboard provides a centralized overview of the complete Student Management System.
+### 🔐 Authentication
 
-### Dashboard Statistics
+* Login interface
+* Credential handling
+* Form validation
+* Password visibility
+* Backend communication
+* Login feedback
 
-- 👨‍🎓 Total Students
-- 📚 Total Courses
-- ✅ Active Students
-- 💰 Fees Collected
-- 📈 Student Enrollment
-- 🧑‍🎓 Recent Students
-- ⚡ Quick Actions
-- 🔔 Notifications
+</td>
 
-### Dynamic Data
+<td width="50%" valign="top">
 
-Dashboard information is retrieved directly from the Spring Boot backend using REST APIs.
+### 📊 Dashboard
 
-### JavaScript Concepts Used
+* Centralized overview
+* Student statistics
+* Course information
+* Recent information
+* Notifications
+* Quick access
 
-- DOM Manipulation
-- `fetch()`
-- `async/await`
-- Promises
-- `forEach()`
-- `filter()`
-- `sort()`
-- `slice()`
-- Array Processing
-- Date Handling
-- Dynamic HTML Generation
-- Event Listeners
-- Number Formatting
+</td>
+</tr>
 
----
+<tr>
+<td valign="top">
 
-## 👨‍🎓 Students Management
+### 👨‍🎓 Student Management
 
-<p align="center">
-  <img src="screenshots/Student Module Page.png" alt="Students Module" width="950">
-</p>
+* Add students
+* View students
+* Edit students
+* Delete students
+* Search students
+* Filter records
+* Dynamic rendering
 
-The Students module is used to manage complete student records stored in the database.
+</td>
 
-### Student Information
+<td valign="top">
 
-- Full Name
-- Student ID
-- Email
-- Phone
-- Gender
-- Date of Birth
-- Course
-- Semester
-- Admission Year
-- Admission Date
-- Address
-- Status
+### 📚 Course Management
 
-### Features
+* Add courses
+* View courses
+* Update courses
+* Delete courses
+* Course information
+* Dynamic course data
 
-- View students
-- Search students
-- Filter students by course
-- Add student
-- Edit student
-- Delete student
-- Dynamic table rendering
-- Backend database integration
+</td>
+</tr>
 
-### Concepts Used
+<tr>
+<td valign="top">
 
-- HTML Tables
-- Forms
-- DOM Manipulation
-- JavaScript Objects
-- JavaScript Arrays
-- Search Logic
-- Filtering
-- Event Handling
-- Fetch API
-- REST API
-- CRUD Operations
-- JSON Data
+### 📅 Attendance
 
----
+* Attendance management
+* Student-based records
+* Dynamic interface
+* Backend integration
 
-## ➕ Add Student Module
+</td>
 
-<p align="center">
-  <img src="screenshots/Add Student Module Page.png" alt="Add Student Module" width="950">
-</p>
+<td valign="top">
 
-The Add Student module provides a structured form for creating new student records.
+### 💰 Fee Management
 
-### Personal Information
+* Fee records
+* Payment information
+* Pending amounts
+* Dynamic data
 
-- Full Name
-- Student ID
-- Email
-- Phone
-- Gender
-- Date of Birth
+</td>
+</tr>
 
-### Academic Information
+<tr>
+<td valign="top">
 
-- Course
-- Admission Year
-- Admission Date
-- Semester
-- Status
-- Address
+### 💬 Messages
 
-### Concepts Used
+* Message interface
+* Communication workflow
+* Dynamic message handling
 
-- HTML Forms
-- Input Fields
-- Select Dropdowns
-- Date Inputs
-- Required Fields
-- JavaScript Validation
-- Dynamic Course Loading
-- JSON
-- REST API
-- HTTP POST Request
-- Async/Await
-- Error Handling
+</td>
+
+<td valign="top">
+
+### ⚙️ Settings
+
+* Profile settings
+* System preferences
+* Administrative controls
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 📚 Course Management
+# 📸 Application Showcase
 
-<p align="center">
-  <img src="screenshots/Course Module Page.png" alt="Courses Module" width="950">
-</p>
+> Replace the filenames below with the exact files from your `screenshots` folder.
 
-The Courses module provides complete CRUD functionality for managing courses.
+<div align="center">
 
-### Course Information
+## 🔐 LOGIN
 
-- Course ID
-- Course Name
-- Course Code
-- Duration
-- Description
+<img src="screenshots/Login Page.png"
+  width="88%"
+  alt="Login Screen"/>
 
-### Example Courses
+<br><br>
 
-- **BCA** — Bachelor of Computer Applications
-- **BBA** — Bachelor of Business Administration
-- **MCA** — Master of Computer Applications
-- **MBA** — Master of Business Administration
+## 📊 DASHBOARD
 
-### Features
+<img src="screenshots/Dashboard Page.png"
+  width="92%"
+  alt="Dashboard"/>
 
-- Add new course
-- View all courses
-- Update course
-- Delete course
-- Dynamic course list
-- Database persistence
+</div>
 
+---
+
+<table>
+<tr>
+
+<td width="50%" align="center">
+
+### 👨‍🎓 STUDENTS
+
+<img src="screenshots/Student Module Page.png"
+  width="100%"
+  alt="Student Management"/>
+
+</td>
+
+<td width="50%" align="center">
+
+### ➕ ADD STUDENT
+
+<img src="screenshots/Add Student Module Page.png"
+  width="100%"
+  alt="Add Student"/>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" align="center">
+
+### 📚 COURSES
+
+<img src="screenshots/Course Module Page.png"
+  width="100%"
+  alt="Courses"/>
+
+</td>
+
+<td width="50%" align="center">
+
+### 📅 ATTENDANCE
+
+<img src="screenshots/Attendance Module Page.png"
+  width="100%"
+  alt="Attendance"/>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="50%" align="center">
+
+### 💰 FEES
+
+<img src="screenshots/Fees Module Page.png"
+  width="100%"
+  alt="Fees"/>
+
+</td>
+
+<td width="50%" align="center">
+
+### 💬 MESSAGES
+
+<img src="screenshots/Messages Module Page.png"
+  width="100%"
+  alt="Messages"/>
+
+</td>
+
+</tr>
+</table>
+
+<div align="center">
+
+## ⚙️ SETTINGS
+
+<img src="screenshots/Settings Module Page.png"
+  width="88%"
+  alt="Settings"/>
+
+</div>
+
+---
+
+# 🧩 Application Modules
+
+<div align="center">
+
+|       Module       | Purpose                   |
+| :----------------: | :------------------------ |
+|    🔐 **Login**    | Secure access interface   |
+|  📊 **Dashboard**  | Centralized overview      |
+| 👨‍🎓 **Students** | Student record management |
+|   📚 **Courses**   | Course management         |
+|  📅 **Attendance** | Attendance management     |
+|     💰 **Fees**    | Fee information           |
+|   💬 **Messages**  | Communication             |
+|   ⚙️ **Settings**  | System preferences        |
+
+</div>
+
+---
+
+# 🏗️ System Architecture
+
+```text
+                    👤 USER
+                      │
+                      ▼
+              ┌───────────────┐
+              │    BROWSER    │
+              └───────┬───────┘
+                      │
+                      ▼
+          ┌────────────────────────┐
+          │       FRONTEND         │
+          │                        │
+          │ HTML • CSS • JavaScript│
+          └───────────┬────────────┘
+                      │
+                  Fetch API
+                      │
+                      ▼
+          ┌────────────────────────┐
+          │       SPRING BOOT      │
+          │        REST API        │
+          └───────────┬────────────┘
+                      │
+                      ▼
+          ┌────────────────────────┐
+          │ Spring Data JPA        │
+          │ + Hibernate            │
+          └───────────┬────────────┘
+                      │
+                      ▼
+          ┌────────────────────────┐
+          │         MySQL          │
+          └────────────────────────┘
+```
+
+---
+
+# 🔄 Data Flow
+
+```text
+👤 User
+   ↓
+🖥️ Frontend
+   ↓
+⚡ JavaScript Fetch API
+   ↓
+🔌 REST Endpoint
+   ↓
+☕ Spring Boot
+   ↓
+🧩 JPA / Hibernate
+   ↓
+🗄️ MySQL
+   ↓
+📦 JSON Response
+   ↓
+✨ Dynamic UI
+```
+
+---
+
+# 🔥 CRUD Workflow
+
+<div align="center">
+
+### CREATE
+
+`➕ Add`
+
+⬇️
+
+### READ
+
+`👁️ View`
+
+⬇️
+
+### UPDATE
+
+`✏️ Edit`
+
+⬇️
+
+### DELETE
+
+`🗑️ Remove`
+
+</div>
+
+---
+
+# 🛠️ Technology Stack
+
+<div align="center">
+
+### 🎨 Frontend
+
+<img src="https://skillicons.dev/icons?i=html,css,js" alt="Frontend"/>
+
+<br><br>
+
+### ☕ Backend
+
+<img src="https://skillicons.dev/icons?i=java,spring" alt="Backend"/>
+
+<br><br>
+
+### 🗄️ Database
+
+<img src="https://skillicons.dev/icons?i=mysql" alt="Database"/>
+
+<br><br>
+
+### 🔧 Tools
+
+<img src="https://skillicons.dev/icons?i=git,github,maven,vscode,idea" alt="Tools"/>
+
+</div>
+
+---
+
+# 📁 Project Structure
+
+```text
+Student-Management-System/
+│
+├── 📂 screenshots/
+│
+├── 📂 student-management-backend/
+│   ├── src/
+│   ├── pom.xml
+│   └── ...
+│
+├── 🔐 index.html
+├── 🎨 style.css
+├── ⚡ script.js
+│
+├── 📊 dashboard.html
+├── 🎨 dashboard.css
+├── ⚡ dashboard.js
+│
+├── 👨‍🎓 students.html
+├── 🎨 students.css
+├── ⚡ students.js
+│
+├── ➕ add-student.html
+├── 🎨 add-student.css
+├── ⚡ add-student.js
+│
+├── 📚 courses.html
+├── 🎨 courses.css
+├── ⚡ courses.js
+│
+├── 📅 attendance.html
+├── 🎨 attendance.css
+├── ⚡ attendance.js
+│
+├── 💰 fees.html
+├── 🎨 fees.css
+├── ⚡ fees.js
+│
+├── 💬 messages.html
+├── 🎨 messages.css
+├── ⚡ messages.js
+│
+├── ⚙️ settings.html
+├── 🎨 settings.css
+├── ⚡ settings.js
+│
+├── .gitignore
+└── README.md
+```
+
+---
+
+# ⚡ Quick Start
+
+### 1. Clone
+
+```bash
+git clone https://github.com/NavyaVerma03/Student-Management-System.git
+cd Student-Management-System
+```
+
+### 2. Configure MySQL
+
+Create/configure the database according to the backend configuration.
+
+```sql
+CREATE DATABASE student_management;
+```
+
+Keep your database credentials private.
+
+### 3. Run Backend
+
+```bash
+cd student-management-backend
+mvn spring-boot:run
+```
+
+### 4. Run Frontend
+
+Open `index.html` using a local development server such as VS Code Live Server.
+
+```text
+index.html
+     ↓
+Live Server
+     ↓
+Browser
+```
+
+---
+
+# 🧠 JavaScript Concepts
+
+```text
+✓ DOM Manipulation
+✓ Event Handling
+✓ Fetch API
+✓ Promises
+✓ Async / Await
+✓ JSON
+✓ Arrays & Objects
+✓ Search
+✓ Filtering
+✓ Dynamic Rendering
+✓ Form Validation
+✓ Error Handling
+```
+
+---
+
+# 🎓 Learning Outcomes
+
+```text
+☕ Java
+🌱 Spring Boot
+🔗 REST APIs
+🧩 Spring Data JPA
+⚙️ Hibernate
+🗄️ MySQL
+🎨 HTML5
+🎨 CSS3
+⚡ JavaScript
+🔄 CRUD Operations
+🌐 Frontend–Backend Integration
+💾 Database Integration
+🔧 Git & GitHub
+```
+
+---
+
+# 🔮 Future Enhancements
+
+```text
+🔐 Spring Security
+      ↓
+🎟️ JWT Authentication
+      ↓
+👥 Role-Based Access
+      ↓
+📖 Swagger / OpenAPI
+      ↓
+🧪 JUnit & Mockito
+      ↓
+📊 Advanced Analytics
+      ↓
+📄 PDF Reports
+      ↓
+☁️ Cloud Deployment
+```
+
+---
+
+# 👩‍💻 Developer
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/DEVELOPER-Navya%20Verma-2F8F95?style=for-the-badge"/>
+
+<br><br>
+
+## Navya Verma
+
+**BCA Final Semester Student**
+**Java & Full-Stack Development Enthusiast**
+
+Building practical applications with **Java, Spring Boot, databases and modern web technologies.**
+
+<br>
+
+<a href="https://github.com/NavyaVerma03">
+<img src="https://img.shields.io/badge/GitHub-NavyaVerma03-155E63?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://www.linkedin.com/in/navya-verma-8b7099391/">
+<img src="https://img.shields.io/badge/LinkedIn-Navya%20Verma-168AAD?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+</div>
+
+---
+
+# ⭐ Support
+
+<div align="center">
+
+If you like the project, consider giving it a ⭐
+
+<br>
+
+<a href="https://github.com/NavyaVerma03/Student-Management-System">
+
+<img src="https://img.shields.io/github/stars/NavyaVerma03/Student-Management-System?style=for-the-badge&logo=github&label=STARS&color=2F8F95"/>
+
+</a>
+
+<br><br>
+
+**Explore • Learn • Build • Improve**
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:9DECF0,30:BAF3F5,65:CCFBF1,100:FFFFFF&height=210&section=footer&text=THANK%20YOU%20FOR%20VISITING!&fontSize=32&fontColor=155E63&animation=fadeIn&fontAlignY=65" width="100%"/>
+
+<br>
+
+### 🌿 BUILD • LEARN • IMPROVE • REPEAT
+
+**Made with ❤️ by Navya Verma**
+
+`Java` • `Spring Boot` • `MySQL` • `JavaScript`
+
+<br>
+
+<a href="https://github.com/NavyaVerma03/Student-Management-System">
+<img src="https://img.shields.io/badge/⭐%20STAR%20THE%20PROJECT-155E63?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+</div>
